@@ -1,0 +1,15 @@
+
+/* Carrusel */
+.carousel-item img {
+  max-height: 600px;
+  width: 100%;
+  object-fit: cover;
+  padding: 1%;
+  border-radius: 8px;
+}
+
+.footer {
+  font-weight: bold;
+}
+
+

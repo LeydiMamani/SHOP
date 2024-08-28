@@ -1,0 +1,170 @@
+
+.header {
+  background-color: #212529;
+  color: #000000;
+  padding: 30px 50px;
+  border-bottom: 2px solid #212529;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilos de la barra de navegación */
+.navbar{
+  background-color: #212529;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000000;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #000000;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #000000;
+}
+
+.navbar-light .navbar-brand {
+  color: #000000;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: #000000;
+}
+
+/* Estilos para el botón de búsqueda */
+.form-control {
+  border-radius: 20px;
+}
+
+.btn-outline-success {
+  color: #212529;
+  border-color: #212529;
+  border-radius: 20px;
+}
+
+.btn-outline-success:hover {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown-menu {
+  background-color: #212529;
+}
+
+.dropdown-item {
+  color: #ffffff;
+}
+
+.dropdown-item:hover {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+/* Botón de Agregar al Carrito */
+.add-to-cart-button {
+  background-color: #212529;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #1a1c1d;
+  transform: scale(1.05);
+}
+
+.add-to-cart-button:active {
+  background-color: #161819;
+}
+
+/* Formulario de búsqueda */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+
+.search-button {
+  background-color: #212529;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #1a1c1d;
+}
+
+@media (max-width: 768px) {
+  .header .container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .nav-menu {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .auth-container {
+      align-items: flex-start;
+  }
+}
+
+.btn-primary {
+  background-color: #212529;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #212529;
+  font-weight: bold;
+}
+
+.social-button {
+  background-color: #212529;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.social-button svg {
+  fill: #ffffff;
+  width: 24px;
+  height: 24px;
+}
+
+.social-button:hover {
+  background-color: #1a1c1d;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.social-button:active {
+  background-color: #161819;
+}

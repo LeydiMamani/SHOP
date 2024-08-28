@@ -1,0 +1,24 @@
+<form>
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col">
+        <input type="number" [(ngModel)]="ingresarnumero" name="ingresarnumero"><br>
+        <button class="btn btn-primary" (click)="agregarNumero()">Agregar</button>
+        <button class="btn btn-danger">Eliminar</button>
+      </div>
+      <div *ngFor="let numero of numeros">
+        <p> {{numero}} </p>
+      </div>
+      <div class="col">
+        <input type="text" [(ngModel)]="ingresarnombre" name="ingresarnombre"><br>
+        <button class="btn btn-primary" (click)="agregarNombre()">Agregar</button>
+        <button class="btn btn-danger">Eliminar</button>
+      </div>
+      <div *ngFor="let nombre of nombres">
+        <p>{{ nombre }}</p>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+</div>
+</form>
