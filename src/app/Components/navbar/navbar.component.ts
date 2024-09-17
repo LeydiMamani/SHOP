@@ -5,6 +5,8 @@ import { RouterLink } from '@angular/router';
 import { Producto } from '../../Models/Producto';
 import { CarritoService } from '../../Services/carrito.service';
 import { CarritoComponent } from '../carrito/carrito.component';
+import { LoginComponent } from '../login/login.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-navbar',
@@ -13,11 +15,15 @@ import { CarritoComponent } from '../carrito/carrito.component';
     CommonModule,
     FormsModule,
     RouterLink,
-  CarritoComponent],
+    LoginComponent,
+    CarritoComponent,
+],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
+  public readonly dialog=inject(MatDialog)
 
   public readonly carritoService = inject(CarritoService)
   subtotal: number = 0;
@@ -36,4 +42,9 @@ export class NavbarComponent {
     this.actualizarSubtotal();
   }
 
+  abrirlogin(){
+    this.dialog.open(LoginComponent, {
+      width: '55%',
+    });
+  }
 }

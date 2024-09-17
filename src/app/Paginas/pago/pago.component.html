@@ -1,228 +1,242 @@
 <app-navbar></app-navbar>
 <!--Pago-->
 <div class="container">
-    <div class="row">
-      <div class="col-sm-6 p-3 text-white">
-        <form>
-          <section>
-            <div class="mb-3">
-              <h5>Contacto</h5>
-              <p class="nav-link" href="#">Iniciar Sesión</p>
-              <label class="form-label">Email address</label>
-              <input type="email" [(ngModel)]="correo" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <p id="emailHelp" class="form-text">Enviarme novedades y ofertas por correo electrónico</p>
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1"></label>
-            </div>
-          </section>
-          <section>
-            <div class="mb-3 ">
-              <h5>Entrega</h5>
-              <div class="accordion" id="accordionExample">
-                <!-- Opción 1: Envio -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      <input type="radio" id="envio" name="opcion" class="form-check-input" checked>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
-                        <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982"/>
-                        <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4zm0 1H7.5v3h-6zM8.5 4V1h3.75l2.25 3zM15 5v10H1V5z"/>
-                      </svg>
-                      <span>Envio</span>
-                    </div>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      Información adicional sobre el envío.
-                    </div>
+  <div class="row">
+    <div class="col-sm-6 p-3 text-white">
+      <form>
+        <section>
+          <div class="mb-3">
+            <h5>Contacto</h5>
+            <p class="nav-link" (click)="abrirlogin()">Iniciar Sesión</p>
+            <label class="form-label">Email address</label>
+            <input type="email" [(ngModel)]="correo" name="correo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <p id="emailHelp" class="form-text">Enviarme novedades y ofertas por correo electrónico</p>
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1"></label>
+          </div>
+        </section>
+        <section>
+          <div class="mb-3 ">
+            <h5>Entrega</h5>
+            <div class="accordion" id="accordionExample">
+              <!-- Opción 1: Envio -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <input type="radio" id="envio" name="opcion" class="form-check-input" checked>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box2-heart" viewBox="0 0 16 16">
+                      <path d="M8 7.982C9.664 6.309 13.825 9.236 8 13 2.175 9.236 6.336 6.31 8 7.982"/>
+                      <path d="M3.75 0a1 1 0 0 0-.8.4L.1 4.2a.5.5 0 0 0-.1.3V15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4.5a.5.5 0 0 0-.1-.3L13.05.4a1 1 0 0 0-.8-.4zm0 1H7.5v3h-6zM8.5 4V1h3.75l2.25 3zM15 5v10H1V5z"/>
+                    </svg>
+                    <span>Envio</span>
+                  </div>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Información adicional sobre el envío.
                   </div>
                 </div>
+              </div>
 
-                <!-- Opción 2: Retiro en tienda -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      <input type="radio" id="retiro" name="opcion" class="form-check-input">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
-                        <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
-                      </svg>
-                      <span>Retiro en tienda</span>
-                    </div>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      Información adicional sobre el retiro en tienda.
-                    </div>
+              <!-- Opción 2: Retiro en tienda -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <input type="radio" id="retiro" name="opcion" class="form-check-input">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                      <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
+                    </svg>
+                    <span>Retiro en tienda</span>
+                  </div>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Información adicional sobre el retiro en tienda.
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-          <!-- Opción 1: Envio -->
-          <section>
-            <div class="mb-3">
-              <h5>Pago</h5>
-              <p>Todas las transacciones son seguras y están encriptadas.</p>
-              <div class="accordion" id="accordionPaymentMethods">
-                <!-- Opción 1: Mercado de Pago -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingPaymentOne">
-                    <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePaymentOne" aria-expanded="false" aria-controls="collapsePaymentOne">
-                      <input type="radio" id="mercadoPago" name="paymentOption" class="form-check-input">
-                      <span>Mercado de Pago</span>
-                    </div>
-                  </h2>
-                  <div id="collapsePaymentOne" class="accordion-collapse collapse" aria-labelledby="headingPaymentOne" data-bs-parent="#accordionPaymentMethods">
-                    <div class="accordion-body">
-                      <div>
-                        <p>
-                          Luego de hacer clic en “Pagar ahora”, serás redirigido a
-                          <br>Mercado Pago para completar tu compra
-                          <br>de forma segura.
-                        </p>
-                      </div>
-                      <div class="svg image">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
-                          <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-                        </svg>
-                      </div>
-                    </div>
+          </div>
+        </section>
+        <!-- Opción 1: Envio -->
+        <section>
+          <div class="mb-3">
+            <h5>Pago</h5>
+            <p>Todas las transacciones son seguras y están encriptadas.</p>
+            <div class="accordion" id="accordionPaymentMethods">
+              <!-- Opción 1: Mercado de Pago -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPaymentOne">
+                  <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePaymentOne" aria-expanded="false" aria-controls="collapsePaymentOne">
+                    <input type="radio" id="mercadoPago" name="paymentOption" class="form-check-input">
+                    <span>Mercado de Pago</span>
                   </div>
-                </div>
-
-                <!-- Opción 2: Yape -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingPaymentTwo">
-                    <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePaymentTwo" aria-expanded="false" aria-controls="collapsePaymentTwo">
-                      <input type="radio" id="yape" name="paymentOption" class="form-check-input">
-                      <span>Yape</span>
-                    </div>
-                  </h2>
-                  <div id="collapsePaymentTwo" class="accordion-collapse collapse" aria-labelledby="headingPaymentTwo" data-bs-parent="#accordionPaymentMethods">
-                    <div class="accordion-body">
+                </h2>
+                <div id="collapsePaymentOne" class="accordion-collapse collapse" aria-labelledby="headingPaymentOne" data-bs-parent="#accordionPaymentMethods">
+                  <div class="accordion-body">
+                    <div>
                       <p>
-                        Realizar el Yape al siguiente número de celular: numero
-                        <br>Revisar que aparezca el nombre: nombres y apellidos
+                        Luego de hacer clic en “Pagar ahora”, serás redirigido a
+                        <br>Mercado Pago para completar tu compra
+                        <br>de forma segura.
                       </p>
                     </div>
-                  </div>
-                </div>
-
-                <!-- Opción 3: Plin -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingPaymentThree">
-                    <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePaymentThree" aria-expanded="false" aria-controls="collapsePaymentThree">
-                      <input type="radio" id="plin" name="paymentOption" class="form-check-input">
-                      <span>Plin</span>
-                    </div>
-                  </h2>
-                  <div id="collapsePaymentThree" class="accordion-collapse collapse" aria-labelledby="headingPaymentThree" data-bs-parent="#accordionPaymentMethods">
-                    <div class="accordion-body">
-                      <a>
-                        (BBVA - INTERBANK - SCOTIABANK - BANBIF - CAJA AREQUIPA - CAJA MUNICIPAL ICA - CAJA SULLANA)
-                        <br>Realizar el PLIN al siguiente número de celular: 998077315
-                        <br>Revisar que aparezca el nombre HERNÁN ENRIQUE CHUMPITAZ RAMIREZ
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Opción 4: Depósito a una Cuenta Bancaria -->
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingPaymentFour">
-                    <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePaymentFour" aria-expanded="false" aria-controls="collapsePaymentFour">
-                      <input type="radio" id="deposito" name="paymentOption" class="form-check-input">
-                      <span>Depósito a una Cuenta Bancaria</span>
-                    </div>
-                  </h2>
-                  <div id="collapsePaymentFour" class="accordion-collapse collapse" aria-labelledby="headingPaymentFour" data-bs-parent="#accordionPaymentMethods">
-                    <div class="accordion-body">
-                      Por favor deposita o transfiere el monto total de tu pedido a una siguientes cuentas:
-                      <br>BCP
-                      <br>TEXTILE CLOTHING SOLUTION SAC.
-                      <br>Cuenta Corriente Soles
-                      <br>Número de cuenta: 191-2416497-0-59
-                      <br>Código interbancario: 002-191-002416497059-52
-                      <br>BBVA
-                      <br>TEXTILE CLOTHING SOLUTION SAC.
-                      <br>Cuenta Corriente Soles
-                      <br>Número de cuenta: 0011-0163-0100052587
-                      <br>Código interbancario: 011 - 163 - 000100052587 - 31
+                    <div class="svg image">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                      </svg>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <h6>Dirección de facturación</h6>
-                <form class="row g-3" (ngSubmit)="imprimir()">
-                  <div class="col-12">
-                    <label for="inputPais" class="form-label">País</label>
-                    <select id="inputPais" class="form-select" [(ngModel)]="ciudad" name="ciudad">
-                      <option value="" disabled selected>País...</option>
-                      <option value="Peru">Peru</option>
-                      <option value="Chile">Chile</option>
-                      <option value="Brazil">Brazil</option>
-                    </select>
+              <!-- Opción 2: Yape -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPaymentTwo">
+                  <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePaymentTwo" aria-expanded="false" aria-controls="collapsePaymentTwo">
+                    <input type="radio" id="yape" name="paymentOption" class="form-check-input">
+                    <span>Yape</span>
                   </div>
-                  <div class="col-md-6">
-                    <label class="form-label">Nombre</label>
-                    <input [(ngModel)]="nombre" name="nombre" type="text" class="form-control" id="inputNombre" placeholder="Nombres">
+                </h2>
+                <div id="collapsePaymentTwo" class="accordion-collapse collapse" aria-labelledby="headingPaymentTwo" data-bs-parent="#accordionPaymentMethods">
+                  <div class="accordion-body">
+                    <p>
+                      Realizar el Yape al siguiente número de celular: numero
+                      <br>Revisar que aparezca el nombre: nombres y apellidos
+                    </p>
                   </div>
-                  <div class="col-md-6">
-                    <label class="form-label">Apellidos</label>
-                    <input [(ngModel)]="apellidos" name="apellidos" type="text" class="form-control" id="inputApellidos" placeholder="Apellidos">
+                </div>
+              </div>
+
+              <!-- Opción 3: Plin -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPaymentThree">
+                  <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePaymentThree" aria-expanded="false" aria-controls="collapsePaymentThree">
+                    <input type="radio" id="plin" name="paymentOption" class="form-check-input">
+                    <span>Plin</span>
                   </div>
-                  <div class="col-12">
-                    <label for="inputDNI" class="form-label">DNI</label>
-                    <input [(ngModel)]="dni" name="dni" type="text" class="form-control" id="inputDNI" placeholder="DNI">
+                </h2>
+                <div id="collapsePaymentThree" class="accordion-collapse collapse" aria-labelledby="headingPaymentThree" data-bs-parent="#accordionPaymentMethods">
+                  <div class="accordion-body">
+                    <a>
+                      (BBVA - INTERBANK - SCOTIABANK - BANBIF - CAJA AREQUIPA - CAJA MUNICIPAL ICA - CAJA SULLANA)
+                      <br>Realizar el PLIN al siguiente número de celular: 998077315
+                      <br>Revisar que aparezca el nombre HERNÁN ENRIQUE CHUMPITAZ RAMIREZ
+                    </a>
                   </div>
-                  <div class="col-12">
-                    <label for="inputDireccion" class="form-label">Dirección</label>
-                    <input [(ngModel)]="direccion" name="direccion" type="text" class="form-control" id="inputDireccion" placeholder="Dirección">
+                </div>
+              </div>
+
+              <!-- Opción 4: Depósito a una Cuenta Bancaria -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPaymentFour">
+                  <div class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapsePaymentFour" aria-expanded="false" aria-controls="collapsePaymentFour">
+                    <input type="radio" id="deposito" name="paymentOption" class="form-check-input">
+                    <span>Depósito a una Cuenta Bancaria</span>
                   </div>
-                  <div class="col-12">
-                    <label for="inputReferencia" class="form-label">Referencia</label>
-                    <input [(ngModel)]="referencia" name="referencia" type="text" class="form-control" id="inputReferencia" placeholder="Referencia">
+                </h2>
+                <div id="collapsePaymentFour" class="accordion-collapse collapse" aria-labelledby="headingPaymentFour" data-bs-parent="#accordionPaymentMethods">
+                  <div class="accordion-body">
+                    Por favor deposita o transfiere el monto total de tu pedido a una siguientes cuentas:
+                    <br>BCP
+                    <br>TEXTILE CLOTHING SOLUTION SAC.
+                    <br>Cuenta Corriente Soles
+                    <br>Número de cuenta: 191-2416497-0-59
+                    <br>Código interbancario: 002-191-002416497059-52
+                    <br>BBVA
+                    <br>TEXTILE CLOTHING SOLUTION SAC.
+                    <br>Cuenta Corriente Soles
+                    <br>Número de cuenta: 0011-0163-0100052587
+                    <br>Código interbancario: 011 - 163 - 000100052587 - 31
                   </div>
-                  <div class="col-md-4">
-                    <label for="inputCiudad" class="form-label">Ciudad</label>
-                    <input [(ngModel)]="ciudad" name="ciudad" type="text" class="form-control" id="inputCiudad" placeholder="Ciudad">
-                  </div>
-                  <div class="col-md-4">
-                    <label for="inputRegión" class="form-label">Región</label>
-                    <input [(ngModel)]="region" name="Region" type="text" class="form-control" id="inputRegión" placeholder="Región">
-                  </div>
-                  <div class="col-md-4">
-                    <label for="inputCodigoPostal" class="form-label">Código Postal (opcional)</label>
-                    <input [(ngModel)]="codigo" name="codigo" type="text" class="form-control" id="inputCodigoPostal" placeholder="Código Postal (opcional)">
-                  </div>
-                  <div class="col-12">
-                    <label for="inputTelefono" class="form-label">Teléfono (opcional)</label>
-                    <input [(ngModel)]="telefono" name="inputTelefono" type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
-                  </div>
-                  <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Pagar ahora</button>
-                  </div>
-                </form>
+                </div>
               </div>
             </div>
-          </section>
-        </form>
-      </div>
-      <div class="col-sm-6 p-3 text-white">
-        <div class="card">
-          <app-resumen-carrito></app-resumen-carrito>
-          <hr>
-          <div>
-            <input name="descuento" placeholder="Codigo de descuento o Tarjeta de regalo" type="text">
-            <button type="submit" [disabled]="">
-              Aplicar
-            </button>
+
+            <div>
+              <h6>Dirección de facturación</h6>
+              <form class="row g-3">
+                <div class="col-12">
+                  <label class="form-label">País</label>
+                  <select id="inputPais" [(ngModel)]="pais" class="form-select" name="pais">
+                    <option value="" disabled selected>País...</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Brazil">Brazil</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Departamento</label>
+                  <select id="inputDepartamento" [(ngModel)]="departamento" class="form-select"  name="Departamento">
+                    <option value="" disabled selected>Departamento...</option>
+                    <option value="Lima">Lima</option>
+                    <option value="Arequipa">Arequipa</option>
+                    <option value="Puno">Puno</option>
+                  </select>
+                </div>
+                <div class="col-12s">
+                  <label class="form-label">Provincia</label>
+                  <select id="inputProvicia" [(ngModel)]="provincia" class="form-select"  name="Provincia">
+                    <option value="" disabled selected>Provincia...</option>
+                    <option value="Camana">Camana</option>
+                    <option value="Arequipa">Arequipa</option>
+                    <option value="Mollendo">Mollendo</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Distrito</label>
+                  <select id="inputDistrito" [(ngModel)]="distrito" class="form-select"  name="Distrito">
+                    <option value="" disabled selected>Distrito...</option>
+                    <option value="Yanahuara">Yanahuara</option>
+                    <option value="Cayma">Cayma</option>
+                    <option value="Mariano Melgar">Mariano Melgar</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Nombre</label>
+                  <input [(ngModel)]="nombre" name="nombre" type="text" class="form-control" id="inputNombre" placeholder="Nombres">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Apellidos</label>
+                  <input [(ngModel)]="apellidos" name="apellidos" type="text" class="form-control" id="inputApellidos" placeholder="Apellidos">
+                </div>
+                <div class="col-12">
+                  <label for="inputDNI" class="form-label">DNI</label>
+                  <input [(ngModel)]="dni" name="dni" type="text" class="form-control" id="inputDNI" placeholder="DNI">
+                </div>
+                <div class="col-12">
+                  <label for="inputDireccion" class="form-label">Dirección</label>
+                  <input [(ngModel)]="direccion" name="direccion" type="text" class="form-control" id="inputDireccion" placeholder="Dirección">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCodigoPostal" class="form-label">Código Postal</label>
+                  <input [(ngModel)]="codigo" name="codigopostal" type="text" class="form-control" id="inputCodigoPostal" placeholder="Código Postal (opcional)">
+                </div>
+                <div class="col-12">
+                  <label for="inputTelefono" class="form-label">Teléfono (opcional)</label>
+                  <input [(ngModel)]="telefono" name="inputTelefono" type="text" class="form-control" id="inputTelefono" placeholder="Teléfono">
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary" (click)="imprimir()">Pagar ahora</button>
+                </div>
+              </form>
+            </div>
           </div>
+        </section>
+      </form>
+    </div>
+    <div class="col-sm-6 p-3 text-white">
+      <div class="card">
+        <app-resumen-carrito></app-resumen-carrito>
+        <hr>
+        <div>
+          <input name="codigoDescuento" [(ngModel)]="codigoDescuento" placeholder="Codigo de descuento o Tarjeta de regalo" type="text">
+          <button type="submit" >
+            Aplicar
+          </button>
         </div>
       </div>
     </div>
-
+  </div>
 </div>

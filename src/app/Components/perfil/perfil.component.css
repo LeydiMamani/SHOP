@@ -1,0 +1,43 @@
+.campo{
+  font-size: 14px;
+  font-family:tahoma, arial;
+}
+.datos{
+  font-size: 15px;
+  font-family: tahoma, arial;
+  gap: 1;
+}
+.radio-group {
+  margin: 10px 0;
+}
+.radio-group label {
+  display: block;
+  margin: 5px 0;
+  font-size: 16px;
+  font-family: tahoma, arial;
+}
+.btn-editar {
+  text-align: center;
+  margin: 20px 0;
+}
+.btn-editar button {
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-editar button:hover {
+  background-color: #212529;
+  transform: scale(1.05);
+}
+
+.btn-editar button:active {
+  background-color: #212529;
+  transform: scale(0.95);
+}

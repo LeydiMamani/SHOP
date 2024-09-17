@@ -10,7 +10,12 @@ import { CarritoComponent } from '../../Components/carrito/carrito.component';
 @Component({
   selector: 'app-tienda',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterLink, NavbarComponent, CarritoComponent],
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterLink,
+    NavbarComponent,
+    CarritoComponent],
   templateUrl: './tienda.component.html',
   styleUrl: './tienda.component.css'
 })

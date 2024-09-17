@@ -8,7 +8,11 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-carrito',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterLink],
+  imports: [
+    FormsModule,
+    CommonModule,
+    RouterLink
+  ],
   templateUrl: './carrito.component.html',
   styleUrl: './carrito.component.css'
 })

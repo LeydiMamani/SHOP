@@ -1,0 +1,36 @@
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ffffff;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.marca:hover {
+  background-color: #e0e0e0;
+  border-color: #999;
+}
+
+.marca svg {
+  margin-right: 8px;
+}
+.datos{
+  font-size: 15px;
+  font-family: tahoma, arial;
+  gap: 1;
+}

@@ -1,0 +1,64 @@
+.svg svg {
+  width: 100%;
+  height: 100%;
+  width: 20px;
+  height: 20px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-5 {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+}
+button {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+button:hover {
+  background-color: #e0e0e0;
+}
+button input[type="checkbox"] {
+  margin-right: 10px;
+}
+.color {
+  color: #f0f0f0;
+}
+button .color {
+  margin: 0;
+}
+
+button.btn-1-2 {
+  background-color: #212529;
+}
+
+button.btn-2-2 {
+  background-color: #1535b6;
+}
+
+button.btn-3-2 {
+  background-color: #682311;
+}
+
+button.btn-4-2 {
+  background-color: #34b918;
+}
+
+button.btn-5-2 {
+  background-color: #a1a6aa;
+}
+
+button.btn-6-2 {
+  background-color: #5e5d16;
+}
