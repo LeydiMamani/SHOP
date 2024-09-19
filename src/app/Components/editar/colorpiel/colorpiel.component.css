@@ -33,10 +33,12 @@ button input[type="checkbox"] {
   margin-right: 10px;
 }
 button.btn-1 {
-  background-color: #fde7d2;
+  background-color: transparent;
+  border: none;
 }
 button.btn-2 {
-  background-color: #ffe4b8;
+  background-color: transparent;
+  border: none;
 }
 button.btn-3 {
   background-color: #ffdeba;
@@ -60,6 +62,10 @@ button.btn-9 {
   background-color: #6b2309;
 }
 
+button.btn-global:hover {
+  color: #c6c6c7;
+  transition: color 0.3s ease;
+}
 .opcion{
   font-size: 15px;
   font-family: tahoma, arial;;
