@@ -40,25 +40,41 @@ button .color {
 }
 
 button.btn-1-2 {
-  background-color: #212529;
+  background-color: transparent;
+  border: none;
 }
 
 button.btn-2-2 {
-  background-color: #1535b6;
+  background-color: transparent;
+  border: none;
 }
 
 button.btn-3-2 {
-  background-color: #682311;
+  background-color: transparent;
+  border: none;
 }
 
 button.btn-4-2 {
-  background-color: #34b918;
+  background-color: transparent;
+  border: none;
 }
 
 button.btn-5-2 {
-  background-color: #a1a6aa;
+  background-color: transparent;
+  border: none;
 }
 
 button.btn-6-2 {
-  background-color: #5e5d16;
+  background-color: transparent;
+  border: none;
+}
+
+button.btn-global:hover {
+  color: #c6c6c7;
+  transition: color 0.3s ease;
+}
+.opcion{
+  font-size: 15px;
+  font-family: tahoma, arial;;
+  color: rgb(121, 121, 121);
 }

@@ -41,25 +41,32 @@ button.btn-2 {
   border: none;
 }
 button.btn-3 {
-  background-color: #ffdeba;
+  background-color: transparent;
+  border: none;
 }
 button.btn-4 {
-  background-color: #f9cb9c;
+  background-color: transparent;
+  border: none;
 }
 button.btn-5 {
-  background-color: #d39574;
+  background-color: transparent;
+  border: none;
 }
 button.btn-6 {
-  background-color: #c47c5c;
+  background-color: transparent;
+  border: none;
 }
 button.btn-7 {
-  background-color: #91441b;
+  background-color: transparent;
+  border: none;
 }
 button.btn-8 {
-  background-color: #7e3412;
+  background-color: transparent;
+  border: none;
 }
 button.btn-9 {
-  background-color: #6b2309;
+  background-color: transparent;
+  border: none;
 }
 
 button.btn-global:hover {
