@@ -1,1 +1,28 @@
-<p>altura works!</p>
+<div>
+  <div class="datos" aling-centre><h5>Altura</h5>
+    <div class="row">
+      <div class="col-12">
+        <mat-card-content>
+          <div class="example-label-container">
+            <label class="example-value-label">{{slider.value}} cm</label>
+          </div>
+          <mat-slider
+              class="example-margin"
+              [disabled]="disabled"
+              [max]="max"
+              [min]="min"
+              [step]="step"
+              [discrete]="thumbLabel"
+              [showTickMarks]="showTicks">
+            <input matSliderThumb [(ngModel)]="value" #slider>
+          </mat-slider>
+        </mat-card-content>
+        <section class="cm">
+          <mat-form-field class="cm">
+            <input matInput type="number" [(ngModel)]="value">
+          </mat-form-field>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

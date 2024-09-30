@@ -9,7 +9,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-altura',
+  selector: 'app-peso',
   standalone: true,
   imports: [
     CommonModule,
@@ -21,22 +21,17 @@ import { RouterLink } from '@angular/router';
     MatCheckboxModule,
     MatSliderModule,
   ],
-  templateUrl: './altura.component.html',
-  styleUrl: './altura.component.css'
+  templateUrl: './peso.component.html',
+  styleUrl: './peso.component.css'
 })
-export class AlturaComponent {
+export class PesoComponent {
+
   disabled = false;
-  max = 250;
+  max = 200;
   min = 50;
   showTicks = false;
   step = 1;
   thumbLabel = false;
   value = 150;
-
-  get alturaEnPies(): string {
-    const pies = Math.floor(this.value / 30.48);
-    const pulgadas = Math.round((this.value % 30.48) / 2.54);
-    return `${pies} pies ${pulgadas} pulgadas`;
-  }
 
 }

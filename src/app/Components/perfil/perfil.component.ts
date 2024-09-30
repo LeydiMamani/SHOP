@@ -26,4 +26,23 @@ export class PerfilComponent {
     });
   }
 
+  genero: string = '';
+  talla: string = '';
+  altura: number = 0;
+  peso: number = 0;
+  colorPiel: string = '';
+  colorCabello: string = '';
+  colorOjos: string = '';
+
+  // Método para actualizar los datos
+  actualizarDatos(genero: string, talla: string, altura: number, peso: number, colorPiel: string, colorCabello: string, colorOjos: string) {
+    this.genero = genero;
+    this.talla = talla;
+    this.altura = altura;
+    this.peso = peso;
+    this.colorPiel = colorPiel;
+    this.colorCabello = colorCabello;
+    this.colorOjos = colorOjos;
+  }
+
 }

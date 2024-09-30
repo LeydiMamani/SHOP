@@ -1,43 +1,30 @@
-
-.header {
+.head {
   background-color: #212529;
-  color: #000000;
-  padding: 30px 50px;
-  border-bottom: 2px solid #212529;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
 }
 
-.header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.navbar-nav .nav-link {
+  color: white;
 }
 
-/* Estilos de la barra de navegación */
-.navbar{
-  background-color: #212529;
+.navbar-nav .nav-link:hover {
+  color: #ddd;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: #000000;
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
 }
 
-.navbar-light .navbar-nav .nav-link.active {
-  color: #000000;
+.social-button {
+  width: 40px;
+  height: 40px;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #000000;
-}
 
-.navbar-light .navbar-brand {
-  color: #000000;
-}
-
-.navbar-light .navbar-brand:hover {
-  color: #000000;
-}
-
-/* Estilos para el botón de búsqueda */
+Estilos para el botón de búsqueda
 .form-control {
   border-radius: 20px;
 }
@@ -53,13 +40,14 @@
   color: #ffffff;
 }
 
-/* Estilos para el menú desplegable */
+Estilos para el menú desplegable
 .dropdown-menu {
-  background-color: #212529;
+  background-color: #ffffff;
+  color: #ffffff;
 }
 
 .dropdown-item {
-  color: #ffffff;
+  color: #000000;
 }
 
 .dropdown-item:hover {
@@ -67,7 +55,7 @@
   color: #ffffff;
 }
 
-/* Botón de Agregar al Carrito */
+Botón de Agregar al Carrito
 .add-to-cart-button {
   background-color: #212529;
   color: #ffffff;
@@ -87,7 +75,7 @@
   background-color: #161819;
 }
 
-/* Formulario de búsqueda */
+Formulario de búsqueda
 .search-form {
   display: flex;
   align-items: center;
@@ -100,17 +88,17 @@
 }
 
 .search-button {
-  background-color: #212529;
-  color: #ffffff;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
   border: none;
-  padding: 5px 10px;
-  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .search-button:hover {
-  background-color: #1a1c1d;
+  transform: scale(1.1);
+  color: #ddd;
 }
 
 @media (max-width: 768px) {
@@ -142,17 +130,19 @@
 }
 
 .social-button {
-  background-color: #212529;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
   border: none;
-  border-radius: 50%;
-  padding: 10px;
-  margin: 0 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, color 0.3s;
 }
+
+.social-button:hover {
+  transform: scale(1.1);
+  color: #ddd;
+}
+
 
 .social-button svg {
   fill: #ffffff;
@@ -160,10 +150,10 @@
   height: 24px;
 }
 
-.social-button:hover {
+/* .social-button:hover {
   background-color: #1a1c1d;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+} */
 
 .social-button:active {
   background-color: #161819;
