@@ -1,0 +1,11 @@
+.btn-detalles{
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
