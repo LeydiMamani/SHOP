@@ -7,6 +7,7 @@ import { EjemploComponent } from './Components/ejemplo/ejemplo.component';
 import { FemeninoComponent } from './Paginas/femenino/femenino.component';
 import { MasculinoComponent } from './Paginas/masculino/masculino.component';
 import { BellezaComponent } from './Paginas/belleza/belleza.component';
+import { InicioComponent } from './Paginas/inicio/inicio.component';
 export const routes: Routes = [
     { path: 'prueba', component: PruebaComponent },
     { path: 'tienda', component: TiendaComponent },
@@ -16,4 +17,5 @@ export const routes: Routes = [
     { path: 'femenino', component: FemeninoComponent },
     { path: 'masculino', component: MasculinoComponent },
     { path: 'belleza', component: BellezaComponent },
+    { path: 'inicio', component: InicioComponent },
 ];
