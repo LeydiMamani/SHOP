@@ -1,0 +1,15 @@
+
+.container.mt-10 {
+  margin-top: 40px; /* Ajusta el margen superior según sea necesario */
+}
+ .card-lista {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 10px;
+  overflow: auto;
+  background-color: #fff;
+  transition: all;
+  padding: 1rem;
+}

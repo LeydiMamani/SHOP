@@ -1,8 +1,62 @@
 <app-navbar></app-navbar>
-<div>
-  <div>
-    <ul>
-      <a>Tops</a>
-    </ul>
+<div class="container mt-10">
+  <div class="row">
+    <div class="col-3">
+      <div class="card-lista">
+        <div class="whithframe">
+          <h5>Catalago</h5>
+          <div class="flex-container">
+            <div class="menu">
+              <ul class="list-unstyled">
+                  <li>
+                      <span class="btn btn" data-bs-toggle="collapse"  role="button" aria-expanded="false" >General</span>
+                  </li>
+                  <li>
+                      <span class="btn btn" data-bs-toggle="collapse"  role="button" aria-expanded="false" >Camisetas</span>
+                  </li>
+                  <li>
+                      <span class="btn btn" data-bs-toggle="collapse"  role="button" aria-expanded="false" >Chaquetas</span>
+                  </li>
+                  <li>
+                      <span class="btn btn" data-bs-toggle="collapse"  role="button" aria-expanded="false" >Pantalones</span>
+                  </li>
+                  <li>
+                      <span class="btn btn" data-bs-toggle="collapse"  role="button" aria-expanded="false" (click)="cambiarPagina('Accesorios')">Accesorios</span>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="content">
+        <ng-container *ngIf="nombrePagina == 'ropa'; else mostrarHistorial">
+          <app-general-f></app-general-f>
+        </ng-container>
+
+        <ng-template #mostrarConfiguracion>
+          <ng-container *ngIf="nombrePagina == 'configuracion'; else mostrarHistorial">
+            <app-camisetas-f></app-camisetas-f>
+          </ng-container>
+        </ng-template>
+
+        <ng-template #mostrarPerfil>
+          <ng-container *ngIf="nombrePagina == 'perfil'; else mostrarHistorial">
+            <app-chaquetas-f></app-chaquetas-f>
+          </ng-container>
+        </ng-template>
+
+        <ng-template #mostrarHistorial>
+          <ng-container *ngIf="nombrePagina == 'historial'; else mostrarMarca">
+            <app-pantalones-f></app-pantalones-f>
+          </ng-container>
+        </ng-template>
+
+        <ng-template #mostrarMarca>
+          <app-accesorios-f></app-accesorios-f>
+        </ng-template>
+      </div>
+    </div>
   </div>
 </div>
